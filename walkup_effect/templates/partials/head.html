@@ -1,0 +1,87 @@
+{% load static i18n compress %}
+
+<!-- Required meta tags -->
+<meta charset="utf-8"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+<meta name="description" content="The Walk Up Effect website"/>
+<meta
+    name="author"
+    content="Cameron Shannon"
+    href="https://github.com/camshan5"
+/>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<link rel="icon" href="{% static 'images/favicons/favicon.ico' %}"/>
+
+{% block css %}
+  <!-- Latest compiled and minified Bootstrap CSS -----
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.5/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+      -->
+
+  <!-- Your stuff: Third-party CSS libraries go here -->
+  <link rel="stylesheet" href="{% static 'dist/fonts/Feather/feather.css' %}"/>
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" %}"
+  />
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/aos/dist/aos.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/choices.js/public/assets/styles/choices.min.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/flickity-fade/flickity-fade.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/flickity/dist/flickity.min.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/highlightjs/styles/vs2015.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/jarallax/dist/jarallax.css" %}"
+  />
+
+  <link
+      rel="stylesheet"
+      href="{% static "dist/libs/quill/dist/quill.core.css" %}"
+  />
+
+  {% compress css %}
+    <!-- This file stores project-specific CSS -->
+    <link href="{% static 'css/project.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet"/>
+  {% endcompress css %}
+
+{% endblock css %}
+
+<!-- Map -->
+<link
+    href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css"
+    rel="stylesheet"
+/>
+

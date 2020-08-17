@@ -1,0 +1,482 @@
+{% load static i18n compress %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static "images/brand.svg" %}" class="navbar-brand-img"
+           alt="The Walkup Effect">
+    </a>
+
+    <!-- Toggler -->
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Toggler -->
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+      >
+        <i class="fe fe-x"></i>
+      </button>
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+              class="nav-link dropdown-toggle"
+              id="navbarLandings"
+              data-toggle="dropdown"
+              href="#"
+              aria-haspopup="true"
+              aria-expanded="false"
+          >
+            Landings
+          </a>
+          <div
+              class="dropdown-menu dropdown-menu-xl p-0"
+              aria-labelledby="navbarLandings"
+          >
+            <div class="row no-gutters">
+              <div class="col-12 col-lg-6">
+                <div
+                    class="dropdown-img-left"
+                    style="background-image: url({% static "images/photos/photo-3.jpg" %});"
+                >
+                  <!-- Heading -->
+                  <h4 class="font-weight-bold text-white mb-0">
+                    Want to see an overview?
+                  </h4>
+                  <!-- Text -->
+                  <p class="font-size-sm text-white">
+                    See all the pages at once.
+                  </p>
+                  <!-- Button  -->
+                  <a
+                      href="{% url 'about' %}"
+                      class="btn btn-sm btn-white shadow-dark font-size-sm"
+                  >
+                    Our Mission
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="dropdown-body">
+                  <div class="row no-gutters">
+                    <div class="col-6">
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Services
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="#">
+                        Coworking
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Rental
+                      </a>
+                      <a class="dropdown-item mb-5" href="#">
+                        Job Listing
+                      </a>
+
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Apps
+                      </h6>
+
+                      <!-- List -->
+                      <a
+                          class="dropdown-item"
+                          href="#"
+                      >
+                        Desktop
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Mobile
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Web
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="#">
+                        Basic
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Startup
+                        <span class="h6 text-uppercase text-primary"
+                        >(new)</span
+                        >
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Enterprise
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Service
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Cloud Hosting
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Agency
+                      </a>
+                    </div>
+                  </div>
+                  <!-- / .row -->
+                </div>
+              </div>
+            </div>
+            <!-- / .row -->
+
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+              class="nav-link dropdown-toggle"
+              id="navbarPages"
+              data-toggle="dropdown"
+              href="#"
+              aria-haspopup="true"
+              aria-expanded="false"
+          >
+            Pages
+          </a>
+          <div
+              class="dropdown-menu dropdown-menu-lg"
+              aria-labelledby="navbarPages"
+          >
+            <div class="row no-gutters">
+              <div class="col-6">
+                <div class="row no-gutters">
+                  <div class="col-12 col-lg-6">
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Career
+                    </h6>
+
+                    <!-- List -->
+                    <a class="dropdown-item" href="#">
+                      Listing
+                    </a>
+                    <a
+                        class="dropdown-item mb-5"
+                        href="#"
+                    >
+                      Opening
+                    </a>
+
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Company
+                    </h6>
+
+                    <!-- List -->
+                    <a class="dropdown-item" href="#">
+                      About
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      Pricing
+                    </a>
+                    <a
+                        class="dropdown-item mb-5 mb-lg-0"
+                        href="#"
+                    >
+                      Terms
+                    </a>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Help center
+                    </h6>
+
+                    <!-- List -->
+                    <a class="dropdown-item" href="#">
+                      Overview
+                    </a>
+                    <a
+                        class="dropdown-item mb-5"
+                        href="#"
+                    >
+                      Article
+                    </a>
+
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Contact
+                    </h6>
+
+                    <!-- List -->
+                    <a class="dropdown-item" href="#">
+                      Basic
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      Cover
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="row no-gutters">
+                  <div class="col-12 col-lg-6">
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Blog
+                    </h6>
+
+                    <!-- List -->
+                    <a class="dropdown-item" href="#">
+                      Rich View
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      Article
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Showcase
+                    </a>
+                    <a
+                        class="dropdown-item mb-5 mb-lg-0"
+                        href="#"
+                    >
+                      Search
+                    </a>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <!-- Heading -->
+                    <h6 class="dropdown-header">
+                      Portfolio
+                      <span class="h6 text-uppercase text-primary">(new)</span>
+                    </h6>
+
+                    <!-- List -->
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Masonry
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Grid Rows
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Parallax
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Case Study
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Sidebar
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Sidebar: Fluid
+                    </a>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                    >
+                      Basic Grid
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / .row -->
+        </li>
+        <li class="nav-item dropdown">
+          <a
+              class="nav-link dropdown-toggle"
+              id="navbarAccount"
+              data-toggle="dropdown"
+              href="#"
+              aria-haspopup="true"
+              aria-expanded="false"
+          >
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarAccount">
+            {% if request.user.is_authenticated %}
+              <!-- Settings -->
+              <li class="dropdown-item dropright">
+                <a
+                    class="dropdown-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                >
+                  Settings
+                  <span
+                      class="h6 text-uppercase text-primary align-self-center ml-1 mb-0"
+                  >(new)</span
+                  >
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    General
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Security
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Users
+                  </a>
+                </div>
+              </li>
+              <!-- Sign Out -->
+              <li class="dropdown-item">
+                <a
+                    class="dropdown-link"
+                    href="{% url 'account_logout' %}"
+                >
+                  {% trans "Sign Out" %}
+                </a>
+              </li>
+            {% else %}
+              <li class="dropdown-item">
+                <a
+                    id="log-in-link"
+                    class="dropdown-link"
+                    href="{% url 'account_login' %}"
+                >
+                  {% trans "Sign In" %}
+                </a>
+              </li>
+              <!-- Sign Up -->
+              <li class="dropdown-item">
+                <a id="sign-up-link"
+                   class="dropdown-link"
+                   href="{% url 'account_signup' %}"
+                >
+                  {% trans "Sign Up" %}
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+              class="nav-link dropdown-toggle"
+              id="navbarDocumentation"
+              data-toggle="dropdown"
+              href="#"
+              aria-haspopup="true"
+              aria-expanded="false"
+          >
+            Documentation
+          </a>
+          <div
+              class="dropdown-menu dropdown-menu-md"
+              aria-labelledby="navbarDocumentation"
+          >
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href="#">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% static 'images/icons/duotone-icons/General/Clipboard.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Documentation
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    Customizing and building
+                  </p>
+                </div>
+              </a>
+              <a class="list-group-item" href="#">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% static 'images/icons/duotone-icons/Layout/Layout-4-blocks.svg' %}
+                </div>
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Components
+                  </h6>
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    Full list of components
+                  </p>
+                </div>
+              </a>
+              <a class="list-group-item" href="">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  {% static 'images/icons/duotone-icons/Files/File.svg' %}
+                </div>
+
+                <!-- Content -->
+                <div class="ml-4">
+                  <!-- Heading -->
+                  <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                    Changelog
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="font-size-sm text-gray-700 mb-0">
+                    Keep track of changes
+                  </p>
+                </div>
+
+                <!-- Badge -->
+                <span class="badge badge-pill badge-primary-soft ml-auto">
+                  1.2.0
+                </span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      {% if request.user.is_authenticated %}
+        <!-- Button -->
+        <a
+            class="navbar-btn btn btn-sm btn-primary lift ml-auto"
+            href="{% url 'users:detail' request.user.username %}"
+        >
+          {% trans "My Profile" %}
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+</nav>
