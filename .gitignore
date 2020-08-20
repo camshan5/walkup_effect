@@ -149,14 +149,6 @@ typings/
 .nfs*
 
 
-### VisualStudioCode template
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-
 ### Windows template
 # Windows thumbnail cache files
 Thumbs.db
@@ -180,7 +172,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
 
 ### macOS template
 # General
@@ -210,13 +201,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Workspace files are user-specific
-*.sublime-workspace
-
-# Project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using Sublime Text
-# *.sublime-project
-
 # SFTP configuration file
 sftp-config.json
 
@@ -231,11 +215,6 @@ Package Control.merged-ca-bundle
 Package Control.user-ca-bundle
 oscrypto-ca-bundle.crt
 bh_unicode_properties.cache
-
-# Sublime-github package stores a github token in this file
-# https://packagecontrol.io/packages/sublime-github
-GitHub.sublime-settings
-
 
 ### Vim template
 # Swap
@@ -272,3 +251,14 @@ walkup_effect/media/
 
 src/.tmp/
 .DS_Store
+
+### Jetbrains Settings
+.idea/*
+
+
+### VisualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
