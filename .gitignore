@@ -210,13 +210,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
-### SublimeText template
-# Cache files for Sublime Text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-
 # Workspace files are user-specific
 *.sublime-workspace
 
