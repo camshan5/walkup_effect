@@ -27,6 +27,7 @@ django-crispy-forms = "1.9.0"
 django-compressor = "2.4"
 django-redis = "4.11.0"
 djangorestframework = "^3.11"
+stripe = "^2.50.0"
 
 
 [tool.poetry.dev-dependencies]
