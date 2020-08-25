@@ -18,9 +18,9 @@ urlpatterns = [
     path("users/", include("walkup_effect.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path('payments', include('walkup_effect.payments.urls')),
-
+    path("payments/", include("walkup_effect.payments.urls")),  # stripe
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development
     urlpatterns += staticfiles_urlpatterns()

@@ -6,11 +6,13 @@ from pathlib import Path
 import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+
 # walkup_effect/
 APPS_DIR = ROOT_DIR / "walkup_effect"
-env = environ.Env()
 
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+env = environ.Env()
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
+
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR / ".env"))
@@ -58,6 +60,7 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.forms",
 ]
+
 THIRD_PARTY_APPS = [
     "crispy_forms",
     "allauth",
@@ -280,5 +283,5 @@ REST_FRAMEWORK = {
 # Your stuff...
 # ------------------------------------------------------------------------------
 
-STRIPE_PUBLISHABLE_KEY = "pk_test_51HIRSoAe4DqcKxmfnqDv2uTZ6F7VelKAdBfMl56qvVmZFsdKPcp5lDvKW40ofVxgu1vfzwrLGSqPS1Ga9TbFT8vr00j9ugdkPX"
-STRIPE_SECRET_KEY = ""  # TODO: Get from .env
+STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")

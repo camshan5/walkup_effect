@@ -15,21 +15,25 @@
     </div>
 
     <div class="#">
-      {% if messages %} {% for message in messages %}
-      <div
-        class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}"
-      >
-        {{ message }}
-        <button
-          type="button"
-          class="close"
-          data-dismiss="alert"
-          aria-label="Close"
+      {% if messages %}
+        {% for message in messages %}
+        <div
+          class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}"
         >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      {% endfor %} {% endif %} {% block content %}
+          {{ message }}
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+      {% endif %}
+
+      {% block content %}
       <!-- WELCOME
        ================================================== -->
       <section class="pt-4 pt-md-11">
@@ -37,33 +41,28 @@
           <div class="row align-items-center">
             <div class="col-12 col-md-5 col-lg-6 order-md-2">
               <!-- Image -->
-              <img src="{% static "images/illustrations/illustration-2.png" %}"
-              class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0"
-              alt="illustrations 2" data-aos="fade-up" data-aos-delay="100" >
+{#              <img src="{% static "images/illustrations/illustration-2.png" %}"#}
+{#              class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0"#}
+{#              alt="illustrations 2" data-aos="fade-up" data-aos-delay="100" >#}
             </div>
             <div class="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
               <!-- Heading -->
               <h1 class="display-3 text-center text-md-left">
-                Welcome to <span class="text-primary">The Walkup Effect</span>.
-                <br />
-                You can do anything.
+                Its though to judge someone when you know
+                  <span class="text-primary">their story</span>.
+
               </h1>
 
               <!-- Text -->
               <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
-                Build a beautiful, modern website with flexible Bootstrap
-                components built from scratch.
+
               </p>
 
               <!-- Buttons -->
               <div class="text-center text-md-left">
-                <a href="#" class="btn btn-primary shadow lift mr-1">
-                  View all pages
-                  <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
-                </a>
-                <a href="#" class="btn btn-primary-soft lift">
-                  Documentation
-                </a>
+                <button class="btn btn-primary shadow lift" id="submitBtn">
+                  Donate! <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -305,12 +304,15 @@
 
     <!-- Le javascript -->
     {% block javascript %}
-    <!-- Your stuff: Third-party javascript libraries go here -->
-    {% include "partials/scripts.html" %}
+      <!-- Your stuff: Third-party javascript libraries go here -->
+      {% include "partials/scripts.html" %}
+      <script src="https://js.stripe.com/v3/"></script>
 
-    <!-- place project specific Javascript in this file -->
-    {% compress js %}
-    <script src="{% static 'js/project.js' %}"></script>
-    {% endcompress %} {% endblock javascript %}
+      <!-- place project specific Javascript in this file -->
+      {% compress js %}
+        <script src="{% static 'js/project.js' %}"></script>
+      {% endcompress %}
+
+    {% endblock javascript %}
   </body>
 </html>
