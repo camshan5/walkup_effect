@@ -50,8 +50,8 @@ def create_checkout_session(request):
             #   have the session ID set as a query param
 
             checkout_session = stripe.checkout.Session.create(
-                success_url=domain_url + "/payments/success?session_id={CHECKOUT_SESSION_ID}",
-                cancel_url=domain_url + "/payments/cancelled/",
+                success_url=domain_url + "payments/success?session_id={CHECKOUT_SESSION_ID}",
+                cancel_url=domain_url + "payments/cancelled/",
                 payment_method_types=["card"],
                 mode="payment",
                 line_items=[
