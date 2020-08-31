@@ -1,9 +1,9 @@
 import stripe
 from django.conf import settings
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
+from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
-from django.views import View
 
 
 class HomePageView(TemplateView):
@@ -18,28 +18,31 @@ class CancelledView(TemplateView):
     template_name = "payments/cancelled.html"
 
 
-@csrf_exempt
-def stripe_config(request):
-    if request.method == "GET":
-        stripe_config_ = {"publicKey": settings.STRIPE_PUBLISHABLE_KEY}
-        return JsonResponse(stripe_config_, safe=False)
+class StripeConfigView(View):
+    public_key = settings.STRIPE_PUBLISHABLE_KEY
+
+    @csrf_exempt
+    def get(self, request):
+        try:
+            stripe_config = {"publicKey": self.public_key}
+            return JsonResponse(stripe_config, safe=False)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e)})
 
 
 class CheckoutSessionView(View):
-    # Create new Checkout Session for the order...
-    # -------------------------------------------------------
-    # Other optional params include:
-    #    * [billing_address_collection] - to display billing
-    #        address details on the page.
-    #    * [customer] - if you have an existing Stripe
-    #        Customer ID.
-    #    * [payment_intent_data] - lets capture the payment
-    #        later.
-    #    * [customer_email] - lets you pre-fill the email
-    #        input in the form.
-    # -------------------------------------------------------
-    # For full details see:
-    #   https:#stripe.com/docs/api/checkout/sessions/create
+    """Creates a new Checkout Session for the order."""
+
+    # Optional params include:
+    #    * [billing_address_collection] - to display billing address
+    #       details on the page.
+    #    * [customer] - if you have an existing Stripe Customer ID.
+    #    * [payment_intent_data] - lets capture the payment later.
+    #    * [customer_email] - lets you pre-fill the email input in
+    #       the form.
+
+    # for details: https:#stripe.com/docs/api/checkout/sessions/create
 
     stripe.api_key = settings.STRIPE_SECRET_KEY
     domain_url = "http://localhost:8000/"
@@ -63,7 +66,7 @@ class CheckoutSessionView(View):
                         "name": "Donation - Tier 1",
                         "quantity": 1,
                         "currency": "usd",
-                        "amount": "5000",  # parses to $50.00
+                        "amount": 5000,  # parses to $50.00
                     }
                 ],
             )

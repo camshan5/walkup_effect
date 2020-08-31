@@ -36,13 +36,11 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 
 # DATABASES
 # ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {"default": env.db("DATABASE_URL", default="postgres:///walkup_effect")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
 # ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
 ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 
@@ -71,16 +69,16 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "walkup_effect.users.apps.UsersConfig",
-    # Your stuff: custom apps go here
+    # Developer created apps here
     "walkup_effect.payments.apps.PaymentsConfig",
+    "walkup_effect.client.apps.ClientConfig",
+    "walkup_effect.products.apps.ProductsConfig",
 ]
 
-# https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # MIGRATIONS
 # ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
 MIGRATION_MODULES = {"sites": "walkup_effect.contrib.sites.migrations"}
 
 # AUTHENTICATION
