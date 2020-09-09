@@ -1,0 +1,36 @@
+{% load crispy_forms_filters %}
+{% load static i18n compress %}
+
+<div class="card shadow-light-lg lift lift-lg">
+  <!-- Image -->
+  <img src="{% static "images/photos/photo-2.jpg" %}" alt="..."
+       class="card-img-top">
+  <!-- Body -->
+  <div class="card-body">
+    <!-- Form -->
+    <form method="post" id="payment-form">
+      {% csrf_token %}
+
+      <div class="form-label-group">
+        {{ form.name|as_crispy_field }}
+        <!-- ** Input example - TODO: Add to crispy forms **
+          <input
+              type="text"
+              class="form-control form-control-flush"
+              id="cardName"
+              placeholder="Name"
+          />
+          <label for="cardName">Name</label>
+        -->
+      </div>
+      <div class="form-label-group">
+        {{ form.amount|as_crispy_field }}
+      </div>
+      <div class="mt-6">
+        <button class="btn btn-block btn-primary lift" id="submitBtn" type="submit">
+          Go to Checkout
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

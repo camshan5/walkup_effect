@@ -1,15 +1,13 @@
 /* Project specific Javascript goes here. */
 
-console.log("Sanity check!");
-
 // Get Stripe publishable key
 fetch("/payments/config/")
   .then((result) => {
     return result.json();
   })
   .then((data) => {
-    // Initialize Stripe.js
-    const stripe = Stripe(data.publicKey);
+    // noinspection JSUnresolvedFunction
+    const stripe = Stripe(data.publicKey); // Initialize Stripe.js
 
     // Event handler
     document.querySelector("#submitBtn").addEventListener("click", () => {
@@ -19,13 +17,13 @@ fetch("/payments/config/")
           return result.json();
         })
         .then((data) => {
-          console.log("Data: " + data);
-
           // Redirect to Stripe Checkout
-          return stripe.redirectToCheckout({ sessionId: data.sessionId });
+          // noinspection JSUnresolvedFunction
+          return stripe.redirectToCheckout({sessionId: data.sessionId});
         })
         .then((res) => {
           console.log("Results: " + res);
         });
     });
   });
+

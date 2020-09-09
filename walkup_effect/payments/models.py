@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.conf import settings
 
 
 class Payment(models.Model):
@@ -8,4 +10,10 @@ class Payment(models.Model):
     amount = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.id})"
+
+    # def get_absolute_url(self):
+    #     """returns a url string -> {url:name, 'kwargs'}"""
+    #     # return reverse("payments:home")
+    #
+    #     return reverse(f"https://checkout.stripe.com/pay/{self.public_key}")

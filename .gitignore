@@ -254,6 +254,7 @@ src/.tmp/
 
 ### Jetbrains Settings
 .idea/*
+.idea/
 .idea
 
 

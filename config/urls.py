@@ -18,8 +18,8 @@ urlpatterns = [
     path("users/", include("walkup_effect.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path("payments/", include("walkup_effect.payments.urls")),  # stripe
-    # path("client/", include("walkup_effect.client.urls")),
+    path("payments/", include("walkup_effect.payments.urls", namespace="payments")),
+    # path("customer/", include("walkup_effect.customer.urls")),
     # path("products/", include("walkup_effect.products.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
