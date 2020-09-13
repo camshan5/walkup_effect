@@ -1,36 +1,57 @@
 {% load crispy_forms_filters %}
 {% load static i18n compress %}
 
-<div class="card shadow-light-lg lift lift-lg">
-  <!-- Image -->
-  <img src="{% static "images/photos/photo-2.jpg" %}" alt="..."
-       class="card-img-top">
-  <!-- Body -->
-  <div class="card-body">
-    <!-- Form -->
-    <form method="post" id="payment-form">
-      {% csrf_token %}
-
-      <div class="form-label-group">
-        {{ form.name|as_crispy_field }}
-        <!-- ** Input example - TODO: Add to crispy forms **
-          <input
-              type="text"
-              class="form-control form-control-flush"
-              id="cardName"
-              placeholder="Name"
-          />
-          <label for="cardName">Name</label>
-        -->
-      </div>
-      <div class="form-label-group">
-        {{ form.amount|as_crispy_field }}
-      </div>
-      <div class="mt-6">
-        <button class="btn btn-block btn-primary lift" id="submitBtn" type="submit">
-          Go to Checkout
-        </button>
-      </div>
-    </form>
+<form action="{% url 'payments:charge' %}" method="post" id="payment-form">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Full name"
+      required
+      type="text"
+    />
   </div>
-</div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="email@address.com"
+      required
+      type="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <div class="input-group">
+      <input
+        class="form-control"
+        id="amount"
+        name="amount"
+        placeholder="$25.00"
+        required
+        type="number"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="card-element">Card</label>
+    <!-- A Stripe Element will be inserted here. -->
+    <div id="card-element"></div>
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+  <div class="form-group">
+    <button
+      class="btn btn-block btn-primary mt-4 lift"
+      id="submitBtn"
+      type="submit"
+    >
+      Submit Donation
+    </button>
+  </div>
+</form>

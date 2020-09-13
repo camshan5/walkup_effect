@@ -10,7 +10,7 @@
   <body>
     <!-- NAVBAR
      ================================================== -->
-    <div class="mb-1">
+    <div>
       {% include 'partials/navbar.html' %}
     </div>
     <div class="#">
@@ -29,7 +29,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-           {% endfor %}
+         {% endfor %}
         {% endif %}
 
         {% block content %}
@@ -70,7 +70,6 @@
             </div>
             <!-- / .container -->
           </section>
-
           <!-- FEATURES
           ================================================== -->
           <section class="py-8 py-md-11 border-bottom">
@@ -136,8 +135,8 @@
         </div>
         <!-- / .container -->
       </section>
-      {% endblock content %}
-    </div>
+        {% endblock content %}
+      </div>
     <!-- /container -->
 
     <!-- FOOTER -->
@@ -149,10 +148,11 @@
     <!-- Le javascript -->
     {% block javascript %}
       <!-- Your stuff: Third-party javascript libraries go here -->
-      {% include "partials/scripts.html" %}
       <script src="https://js.stripe.com/v3/"></script>
+      {% include "partials/scripts.html" %}
       <!-- place project specific Javascript in this file -->
       {% compress js %}
+        <script src="{% static 'js/payments/stripe.js' %}"></script>
         <script src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
     {% endblock javascript %}

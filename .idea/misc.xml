@@ -3,5 +3,8 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/walkup_effect/static/js/stripe.js" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (walkup-effect-TO0HwR78-py3.8)" project-jdk-type="Python SDK" />
 </project>
