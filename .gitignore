@@ -253,10 +253,8 @@ src/.tmp/
 .DS_Store
 
 ### Jetbrains Settings
-.idea/*
-.idea/
-.idea
-
+/.idea/
+/.idea/*
 
 ### VisualStudioCode template
 .vscode/*
@@ -264,3 +262,4 @@ src/.tmp/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
