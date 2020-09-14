@@ -150,12 +150,12 @@
       <!-- Your stuff: Third-party javascript libraries go here -->
       <script src="https://js.stripe.com/v3/"></script>
       {% include "partials/scripts.html" %}
+
       <!-- place project specific Javascript in this file -->
       {% compress js %}
-        <script src="{% static 'js/payments/stripe.js' %}"></script>
         <script src="{% static 'js/project.js' %}"></script>
+        <script src="{% static 'js/payments/stripe.js' %}"></script>
       {% endcompress %}
     {% endblock javascript %}
-
   </body>
 </html>

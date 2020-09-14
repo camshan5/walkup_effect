@@ -1,14 +1,33 @@
+/**
+ * Custom variables followed by theme variables followed by
+ * Bootstrap variables to ensure cascade of styles.
+ **/
 
+// Bootstrap functions
+@import "../../../node_modules/bootstrap/scss/functions";
 
-@import './walkup_effect/static/scss/theme';
+// Theme functions
+@import "theme/functions";
 
-// project specific CSS goes here
+// Custom variables
+@import "user-variables";
+
+// Theme variables
+@import "theme/variables";
+
+// Bootstrap core
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// Theme core
+@import "theme/theme";
+
+/**
+ * Project specific CSS goes here
+ **/
 
 ////////////////////////////////
-		//Variables//
+//Variables//
 ////////////////////////////////
-
-// Alert colors
 
 $white: #fff;
 $mint-green: #d6e9c6;
@@ -16,14 +35,15 @@ $black: #000;
 $pink: #f2dede;
 $dark-pink: #eed3d7;
 $red: #b94a48;
-
+$stripe-red: #fa755a !default;
+$stripe-off-white: #fefde5 !important;
 
 ////////////////////////////////
-		//Alerts//
+//Alerts//
 ////////////////////////////////
 
-// bootstrap alert CSS, translated to the django-standard levels of
-// debug, info, success, warning, error
+// bootstrap alert CSS, translated to the django-standard
+// levels of debug, info, success, warning, error
 
 .alert-debug {
   background-color: $white;
@@ -37,6 +57,52 @@ $red: #b94a48;
   color: $red;
 }
 
-//.shape {
-//    background-color: $bg-gray;
-//}
+////////////////////////////////
+//Stripe Element Overrides//
+////////////////////////////////
+
+.StripeElement {
+  box-sizing: border-box;
+  height: calc(1.6em + 1.625rem + 2px);
+  padding: $input-btn-padding-x $input-btn-padding-y;
+  border: 1px solid $gray-200;
+  border-radius: 0.375rem;
+  background-color: $white;
+  box-shadow: none;
+}
+
+.StripeElement--focus {
+  box-shadow: none;
+  border: 1px solid $primary-desat;
+}
+
+.StripeElement--invalid {
+  border-color: $stripe-red;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: $stripe-off-white;
+}
+
+.ElementsApp input {
+  text-align: center;
+}
+
+////////////////////////////////
+//Custom Element//
+////////////////////////////////
+
+.navbar-bottom-border {
+  border-bottom: 0.0025rem solid $gray-100;
+}
+
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+
+.footer {
+  //position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}

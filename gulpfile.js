@@ -11,6 +11,7 @@ const del = require("del");
 const fileinclude = require("gulp-file-include");
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
+const concat = require("gulp-concat");
 const npmdist = require("gulp-npm-dist");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass");
@@ -74,8 +75,6 @@ const paths = {
     },
   },
 };
-
-console.log(paths);
 
 const gtag =
   '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-2"></script>' +
@@ -252,4 +251,21 @@ gulp.task(
     gulp.parallel("fileinclude", "scss"),
     gulp.parallel("browsersync", "watch")
   )
+);
+
+// .pipe(gulpif("*.css", cleancss()))
+gulp.task("concat", () =>
+  gulp
+    .src(`${staticDirs}/js/*.js`)
+    .pipe(concat("project.js"))
+    .pipe(gulpif("*.js", uglify()))
+    .pipe(gulp.dest(staticDirs + "/js"))
+);
+
+gulp.task("cleancss", () =>
+  gulp
+    .src(`${staticDirs}/css/*.css`)
+    .pipe(concat("project.min.css"))
+    .pipe(gulpif("*.css", cleancss()))
+    .pipe(gulp.dest(staticDirs + "/css"))
 );

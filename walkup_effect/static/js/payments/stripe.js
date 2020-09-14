@@ -78,7 +78,6 @@ fetch("/payments/config/")
       form.submit();
     }
 
-
   });
 
 

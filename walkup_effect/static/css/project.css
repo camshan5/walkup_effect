@@ -1,7 +1,7 @@
 /**
- * Custom variables followed by theme variables followed by Bootstrap variables
- * to ensure cascade of styles.
- */
+ * Custom variables followed by theme variables followed by
+ * Bootstrap variables to ensure cascade of styles.
+ **/
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -14268,9 +14268,18 @@ body.compensate-for-scrollbar {
     right: 0; } }
 
 /**
- * The CSS shown here will not be introduced in the Quickstart guide, but shows
- * how you can use CSS to style your Element's container.
- */
+ * Project specific CSS goes here
+ **/
+.alert-debug {
+  background-color: #fff;
+  border-color: #d6e9c6;
+  color: #000; }
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }
+
 .StripeElement {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14278,7 +14287,7 @@ body.compensate-for-scrollbar {
   padding: 1.25rem 0.8125rem;
   border: 1px solid #ccced0;
   border-radius: 0.375rem;
-  background-color: #ffffff;
+  background-color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none; }
 
@@ -14303,17 +14312,6 @@ body.compensate-for-scrollbar {
   background-color: #e5e6e7; }
 
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #f5f5f5; }
-
-.alert-debug {
-  background-color: #fff;
-  border-color: #d6e9c6;
-  color: #000; }
-
-.alert-error {
-  background-color: #f2dede;
-  border-color: #eed3d7;
-  color: #b94a48; }
