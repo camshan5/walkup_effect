@@ -1,0 +1,360 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load static i18n compress %}
+
+{% block content %}
+
+<!-- Welcome -->
+<!-- prettier-ignore -->
+<section
+  data-jarallax
+  data-speed=".8"
+  class="pt-12 pb-10 pt-md-15 pb-md-14 overlay overlay-dark overlay-70"
+  style="background-image: url({%static 'images/helping-signs.webp'%})"
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <!-- Heading -->
+        <h1
+          class="display-3 font-weight-bold text-white"
+          id="welcomeHeadingSource"
+        >
+          Inspire students to <br />
+          <span
+            class="text-primary"
+            data-toggle="typed"
+            data-options='{"strings": ["be the help.", "make a difference.", "support those in need."]}'
+          ></span>
+        </h1>
+
+        <!-- Text -->
+        <p class="lead text-white-80 mb-4">
+          It is important to us that every student we come into contact with feels inspired to
+          help others, has the strength to get through another day, and wants to be the change
+          we all want to see in the world.
+        </p>
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+<!-- PROCESS
+    ================================================== -->
+<section class="pt-8 pb-6 pt-md-11">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6">
+        <!-- Pre-heading -->
+        <h5 class="text-uppercase text-primary font-weight-bold">
+          Day 1 (Tuesday)
+        </h5>
+
+        <!-- Heading -->
+        <h2>All School Assembly</h2>
+
+        <!-- Text -->
+        <p class="text-gray-600 mb-6 mb-md-4">
+          We launch our program with an a powerful, inspirational, and
+          motivational all school assembly. During the assembly, we discus the
+          hard truth regarding mental health.
+        </p>
+
+        <p class="text-gray-600 mb-6 mb-md-0">
+          It is important that all students can hear and see the the struggle
+          that others may be facing on a daily basis. The purpose of this
+          assembly is to open the eyes of each student to the world of mental
+          health, inspire them to be the change, and encourage them to take
+          action.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-5">
+        <div class="row no-gutters">
+          <div class="col-4">
+            <!-- Image -->
+            <div
+              class="w-150 mt-9 p-1 bg-white shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="{% static 'images/school-presentation-3.jpg' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-4">
+            <!-- Image -->
+            <div class="w-150 p-1 bg-white shadow-lg" data-aos="fade-up">
+              <img
+                src="{%static 'images/school-presentation-2.webp' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-4 position-relative">
+            <!-- Image -->
+            <div
+              class="w-150 mt-11 float-right p-1 bg-white shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <img
+                src="{% static 'images/school-presentation.jpg' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+<section class="pt-8 pb-6 pt-md-11">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6 order-md-2">
+        <!-- Pre-heading -->
+        <h5 class="text-uppercase text-primary font-weight-bold">
+          Days 2 - 7 (Wednesday - Wednesday)
+        </h5>
+        <!-- Header -->
+        <h2>Action Days</h2>
+        <!-- Section Heading -->
+        <h3 class="mb-1">Inspire</h3>
+        <!-- Text -->
+        <p class="text-gray-600 mb-4 mb-md-4">
+          For the next 6 days, students will watch inspiring stories of
+          struggling individuals and how a little positivity can affect their
+          life.
+        </p>
+        <p class="text-gray-600 mb-4 mb-md-6">
+          Students will watch a 10 minute
+          <span class="text-primary">"Walk-up episode"</span>
+          each morning that will educate them on mental health, normalize the
+          conversation, and inspire them to be the love, support, and help
+          struggling individuals may need!
+        </p>
+        <!-- Section Heading -->
+        <h3 class="mb-1">Encourage</h3>
+        <!-- Text -->
+        <p class="text-gray-600 mb-3">
+          The purpose of each episode is for the students to understand that
+          <span class="text-primary text-uppercase">everyone</span> has a story.
+        </p>
+        <p class="text-gray-600 mb-3">
+          Most importantly, we want the students to feel encouraged and feel the
+          sense of responsibility to be the person that can change someone’s
+          life.
+        </p>
+      </div>
+
+      <div class="col-12 col-md-5 col-lg-6 order-md-1">
+        <div class="row no-gutters">
+          <div class="col-6">
+            <!-- Image -->
+            <div
+              class="w-110 w-lg-100 w-md-130 p-1 bg-white shadow-lg"
+              data-aos="fade-up"
+            >
+              <img
+                src="{%static 'images/director-action.webp' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-6 position-relative">
+            <!-- Image -->
+            <div
+              class="w-150 mt-8 float-right"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <!-- Macbook -->
+              <div class="device device-macbook">
+                <img
+                  src="{% static 'images/action-days.webp' %}"
+                  class="device-screen"
+                  alt="..."
+                />
+                <img
+                  src="{% static 'images/devices/macbook.svg' %}"
+                  class="img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+<section class="pt-8 pb-6 pt-md-11">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-6">
+        <!-- Pre-heading -->
+        <h5 class="text-uppercase text-primary font-weight-bold">
+          Day 8 (Thursday)
+        </h5>
+
+        <!-- Heading -->
+        <h2>Round Up</h2>
+
+        <!-- Text -->
+        <p class="text-gray-600 mb-6 mb-md-4">
+          It is time to gather as a school again and talk about the what we have
+          learned. This is the point in the program where we hope to have
+          students come up and share their stories. When students see people
+          going up and sharing their story without judgement, they will feel
+          encouraged to talk and ask for help if needed.
+        </p>
+
+        <p class="text-gray-600 mb-6 mb-md-0">
+          This is also they day where the students begin their task of raising
+          money to help bring the help and support onto campus that can change
+          the direction of a student’s life. They will have 36 hours to go out
+          and share the schools “walkupevent” page with their supporters.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-5">
+        <div class="row no-gutters">
+          <div class="col-6">
+            <!-- Image -->
+            <div class="w-150 p-1 bg-white shadow-lg" data-aos="fade-up">
+              <img
+                src="{% static 'images/photos/photo-13.jpg' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col-6 position-relative">
+            <!-- Image -->
+            <div
+              class="w-150 mt-11 float-right p-1 bg-white shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <img
+                src="{% static 'images/round-up.webp' %}"
+                class="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+<!-- IMAGE
+    ================================================== -->
+
+<!-- prettier-ignore -->
+<section
+  data-jarallax
+  data-speed=".8"
+  class="py-14 py-lg-16 jarallax overlay overlay-dark overlay-40"
+  style="background-image: url({% static 'images/cover-13.webp' %})"
+>
+  <!-- Shape -->
+  <div class="shape shape-top shape-fluid-x svg-shim text-white">
+    <img src="{% static 'images/shapes/angles/angle-top-white.svg' %}" alt="..." />
+  </div>
+
+  <!-- Shape -->
+  <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+    <img src="{% static 'images/shapes/angles/angle-bottom-white.svg' %}" alt="..." />
+  </div>
+</section>
+
+<!-- ABOUT
+    ================================================== -->
+<section class="py-8 py-md-11 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-5 col-lg-6 order-md-2">
+
+      </div>
+      <div class="col-12 col-md-7 col-lg-6 order-md-1">
+        <!-- Heading -->
+        <h2>
+          Keep your job applications <br />
+          <span class="text-primary">organized and up to date</span>.
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-6">
+          Landkit centralizes all your job applications, resumes, and work,
+          whether they're from our platform or through another site or service.
+        </p>
+
+        <!-- List -->
+        <div class="d-flex">
+          <!-- Icon -->
+          <div class="icon text-primary">
+            <img
+              src="{% static 'images/icons/duotone-icons/General/Clipboard.svg' %}"
+              class="img-fluid"
+              alt="..."
+            />
+          </div>
+
+          <div class="ml-5">
+            <!-- Heading -->
+            <h4 class="mb-1">Magic Resume</h4>
+            <!-- Text -->
+            <p class="text-muted mb-5">
+              Magic Resume will adapt based on what positions the employer has
+              available when it's shared.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <!-- Icon -->
+          <div class="icon text-primary">
+            <img
+              src="{% static 'images/icons/duotone-icons/Files/Folder-star.svg' %}"
+              class="img-fluid"
+              alt="..."
+            />
+          </div>
+
+          <div class="ml-5">
+            <!-- Heading -->
+            <h4 class="mb-1">Employer Insights</h4>
+
+            <!-- Text -->
+            <p class="text-muted mb-0">
+              Learn about who's looking at your profile and what experience
+              they're most interested in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+{% endblock content %}

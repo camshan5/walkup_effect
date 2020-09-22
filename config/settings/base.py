@@ -7,6 +7,8 @@ import environ
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 
+print(f'\n{"*" * 80}\n ROOT_DIR: {ROOT_DIR}\n{"*" * 80}\n')
+
 # walkup_effect/
 APPS_DIR = ROOT_DIR / "walkup_effect"
 

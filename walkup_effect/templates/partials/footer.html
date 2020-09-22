@@ -1,82 +1,80 @@
 {% load static i18n compress %}
 
-<footer class="footer mt-auto py-6 py-md-8 ">
-  <div class="container">
+<!-- SHAPE
+      ================================================== -->
+<div class="position-relative">
+  <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+    <img src="{% static 'images/shapes/curves/curve-1.svg' %}" alt="..." />
+  </div>
+</div>
+
+<footer class="footer bg-dark bg-black">
+  <div class="container mt-auto py-6 py-md-8 border-top border-gray-900-50">
     <div class="row">
+      <!-- prettier-ignore -->
       <div class="col-12 col-md-4 col-lg-3">
-        <!-- Brand -->
-        <img src="{% static "images/brand.png" %}" alt="The Walk Up Effect"
-             class="footer-brand img-fluid mb-2">
-        <!-- Text -->
-        <p class="text-gray-700 mb-2">
-          A better way to build.
-        </p>
-        <!-- Social -->
+        <img
+          src="{% static "images/brand.png" %}"
+          alt="The Walk Up Effect"
+          class="footer-brand img-fluid mb-4"
+        />
         <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
           <li class="list-inline-item list-social-item mr-3">
             <a href="#" class="text-decoration-none">
-              <img src="{% static "images/icons/social/instagram.svg" %}"
-                   class="list-social-icon" alt="Instagram">
+              <img
+                src="{% static "images/icons/social/instagram.svg" %}"
+                class="list-social-icon"
+                alt="Instagram"
+              />
             </a>
           </li>
           <li class="list-inline-item list-social-item mr-3">
             <a href="#" class="text-decoration-none">
-              <img src="{% static "images/icons/social/facebook.svg" %}"
-                   class="list-social-icon" alt="Facebook">
+              <img
+                src="{% static "images/icons/social/facebook.svg" %}"
+                class="list-social-icon"
+                alt="Facebook"
+              />
             </a>
           </li>
           <li class="list-inline-item list-social-item mr-3">
             <a href="#" class="text-decoration-none">
-              <img src="{% static "images/icons/social/twitter.svg" %}"
-                   class="list-social-icon" alt="Twitter">
+              <img
+                src="{% static "images/icons/social/twitter.svg" %}"
+                class="list-social-icon"
+                alt="Twitter"
+              />
             </a>
           </li>
         </ul>
       </div>
-      <div class="col-6 col-md-4 col-lg-2"></div>
-      <div class="col-6 col-md-4 col-lg-2"></div>
-      <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Connect
-        </h6>
 
-        <!-- List -->
+      <!-- Spacing -->
+      <div class="col-6 col-md-4 col-lg-2"></div>
+      <div class="col-6 col-md-4 col-lg-2"></div>
+
+      <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+        <h6 class="font-weight-bold text-uppercase text-gray-700">Connect</h6>
+
         <ul class="list-unstyled text-muted mb-0">
           <li class="mb-3">
-            <a href="#" class="text-reset">
-              Page Builder
-            </a>
-          </li>
-          <li class="mb-3">
-            <a href="#" class="text-reset">
-              UI Kit
-            </a>
+            <a href="#" class="text-reset"> Page Builder </a>
           </li>
 
+          <li class="mb-3">
+            <a href="#" class="text-reset"> UI Kit </a>
+          </li>
         </ul>
       </div>
       <div class="col-6 col-md-4 col-lg-2">
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Legal
-        </h6>
-        <!-- List -->
+        <h6 class="font-weight-bold text-uppercase text-gray-700">Legal</h6>
+
         <ul class="list-unstyled text-muted mb-0">
           <li class="mb-3">
-            <a href="#" class="text-reset">
-              Documentation
-            </a>
-          </li>
-          <li class="mb-3">
-            <a href="#" class="text-reset">
-              Changelog
-            </a>
+            <a href="#" class="text-reset"> Documentation </a>
           </li>
         </ul>
       </div>
     </div>
-    <!-- / .row -->
   </div>
-  <!-- / .container -->
 </footer>

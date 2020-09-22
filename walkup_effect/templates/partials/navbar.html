@@ -1,6 +1,6 @@
 {% load static i18n compress %}
-
-<nav class="navbar navbar-expand-lg navbar-bottom-border navbar-light bg-white">
+{#navbar-dark navbar-togglable fixed-top#}
+<nav class="navbar navbar-expand-lg navbar-dark navbar-togglable fixed-top">
   <div class="container">
     <!-- Brand -->
     <a class="navbar-brand" href="{% url 'home' %}">
@@ -49,11 +49,11 @@
             Learn More
           </a>
           <div
-              class="dropdown-menu dropdown-menu-xl p-0"
+              class="dropdown-menu dropdown-menu-md p-0"
               aria-labelledby="navbarLandings"
           >
             <div class="row no-gutters">
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-8">
                 <div
                     class="dropdown-img-left"
                     style="background-image: url({% static "images/photos/photo-3.jpg" %});"
@@ -71,7 +71,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-4">
                 <div class="dropdown-body">
                   <div class="row no-gutters">
                     <div class="col-6">
@@ -107,37 +107,16 @@
                         Mobile
                       </a>
                     </div>
-                    <div class="col-6">
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Web
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="#">
-                        Basic
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        Startup
-                        <span class="h6 text-uppercase text-primary"
-                        >(new)</span
-                        >
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        Enterprise
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        Service
-                      </a>
-                    </div>
                   </div>
                   <!-- / .row -->
                 </div>
               </div>
             </div>
             <!-- / .row -->
-
           </div>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="{% url 'payments:home' %}">Donate</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -202,9 +181,7 @@
             {% endif %}
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Take a Look</a>
-        </li>
+
       </ul>
       {% if request.user.is_authenticated %}
         <!-- Button -->

@@ -27,9 +27,11 @@
       <w>httponly</w>
       <w>imagemin</w>
       <w>instagram</w>
+      <w>iphonex</w>
       <w>landkit</w>
       <w>levelname</w>
       <w>locmem</w>
+      <w>macbook</w>
       <w>minifies</w>
       <w>navbar</w>
       <w>npmdist</w>
@@ -39,9 +41,12 @@
       <w>socialaccount</w>
       <w>sourcery</w>
       <w>toggler</w>
+      <w>unstyled</w>
       <w>useref</w>
       <w>uvicorn</w>
       <w>walkup</w>
+      <w>walkupevent</w>
+      <w>webp</w>
       <w>whitenoise</w>
     </words>
   </dictionary>

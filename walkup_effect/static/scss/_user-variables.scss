@@ -7,23 +7,26 @@
 // Color system overrides
 
 // tints of #00e14 -> https://www.color-hex.com/color/000e14
-$white: #ffffff !default;
-$gray-100: #e5e6e7 !default;
-$gray-200: #ccced0 !default;
-$gray-300: #b2b6b8 !default;
-$gray-400: #999ea1 !default;
-$gray-500: #7f8689 !default;
-$gray-600: #666e72 !default;
-$gray-700: #4c565a !default;
-$gray-800: #323e42 !default;
-$gray-900: #19262b !default;
-$black: #000e14 !default;
+$white: #FFFFFF !default;
+$gray-50: #F4F5F6 !default;
+$gray-100: #E9EBEC !default;
+$gray-200: #D3D8D9 !default;
+$gray-300: #BDC4C7 !default;
+$gray-400: #A7B0B4 !default;
+$gray-500: #919DA1 !default;
+$gray-600: #7b898e !default;
+$gray-700: #4C565A !default;
+$gray-800: #424A4D !default;
+$gray-900: #1b2a4e !default;
+$black: #002B3D   !default;
 
 // Colors
 $primary: #008ecc !default;
 $secondary: $gray-700 !default;
-$primary-desat: #00a0e6 !default;
+//$primary-desat: #1494CC !default;  // desaturated by 10%
+
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
 $input-placeholder-color: $gray-300 !default;
+$text-muted: $gray-200 !default;

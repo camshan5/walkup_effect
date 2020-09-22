@@ -1,1 +1,215 @@
+<!-- prettier-ignore -->
 {% extends "base.html" %}
+{% load static i18n compress %}
+
+{% block content %}
+<section
+  class="overlay overlay-black overlay-50"
+  data-jarallax
+  data-speed=".8"
+  style="background-image: url({% static 'images/joshua-tree-road.webp'%})"
+>
+  <div class="container-fluid d-flex flex-column">
+    <div
+      class="row align-items-center justify-content-center min-vh-100 py-8 py-md-11"
+    >
+      <div class="col-12 col-md-9 col-lg-7 mt-auto">
+        <div class="row">
+          <div class="col-12 col-md-9 col-lg-7">
+            <!-- Heading -->
+            <h1
+              class="display-1 text-center text-md-left text-white text-uppercase "
+            >
+              Its tough to <span class="text-primary">judge</span> someone...
+              <br />
+            </h1>
+
+            <!-- Text -->
+            <h1 class="text-center display-3  text-md-left text-muted mb-6 mb-lg-8">
+              when you know their story.
+            </h1>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mt-auto text-center">
+        <a
+          class="btn btn-white btn-rounded-circle shadow"
+          data-toggle="smooth-scroll"
+          data-offset="0"
+          href="#overview"
+        >
+          <i class="fe fe-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="pt-7 pt-md-10 min-vh-100"
+  id="overview"
+  data-jarallax
+  data-speed=".8"
+>
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-md">
+        <h1 class="mb-0">At A Glance</h1>
+      </div>
+      <div class="col-12 col-md-auto">
+        <!-- Button -->
+        <a
+          href="{% url 'program' %}"
+          class="btn btn-sm btn-outline-gray-300 d-none d-md-inline"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-4" data-aos="fade-up">
+        <!-- Card -->
+        <div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+          <!-- Image -->
+          <img
+            src="{% static 'images/school-presentation-2.webp' %}"
+            alt="..."
+            class="card-img-top"
+          />
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <img
+                src="{% static 'images/shapes/curves/curve-1-white.svg' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body position-relative">
+            <!-- Badge -->
+            <div class="position-relative text-right mt-n8 mr-n4 mb-3">
+              <span class="badge badge-pill badge-primary">
+                <span class="h6 text-uppercase">Lets Talk</span>
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h2>All School Assembly</h2>
+            <!-- Divider -->
+            <hr class="card-meta-divider" />
+            <!-- Text -->
+            <p class="text-gray-600 lead">
+              Lets start this off with a powerful, inspirational, and
+              motivational assembly that gives the students a look into the next
+              2 weeks!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <!-- Card -->
+        <div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+          <!-- Image -->
+          <img
+            src="{% static 'images/action-sunset.webp' %}"
+            alt="..."
+            class="card-img-top"
+          />
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <img
+                src="{% static 'images/shapes/curves/curve-1-white.svg' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body position-relative">
+            <!-- Badge -->
+            <div class="position-relative text-right mt-n8 mr-n4 mb-3">
+              <span class="badge badge-pill badge-secondary">
+                <span class="h6 text-uppercase">Lets Do</span>
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h2>Action Days</h2>
+            <!-- Divider -->
+            <hr class="card-meta-divider" />
+            <!-- Text -->
+            <p class="text-gray-600 lead">
+              Time to change some lives!! We have 6 days to demonstrate the 6
+              walk up steps and inspire the students to do their part in making
+              an impact!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <!-- Card -->
+        <div class="card shadow-light-lg mb-6 mb-md-0 lift lift-lg">
+          <!-- Image -->
+          <img
+            src="{% static 'images/round-up.webp' %}"
+            alt="..."
+            class="card-img-top"
+          />
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+              <img
+                src="{% static 'images/shapes/curves/curve-1-white.svg' %}"
+                alt="..."
+              />
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body position-relative">
+            <!-- Badge -->
+            <div class="position-relative text-right mt-n8 mr-n4 mb-3">
+              <span class="badge badge-pill badge-primary">
+                <span class="h6 text-uppercase">Lets Listen</span>
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h2>Round Up</h2>
+            <!-- Divider -->
+            <hr class="card-meta-divider" />
+            <!-- Text -->
+            <p class="text-gray-600 lead">
+              It’s time to see and hear the change that has been made around
+              campus! Lets see how many lives have been saved and changed!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+</section>
+<section class="pt-7 pt-md-10">
+  <div class="container py-6 py-md-8 border-top border-gray-300">
+    <div class="row align-items-center">
+      <div class="col-12 col-md">
+        <h3 class="mb-1 font-weight-bold">Get our stories delivered</h3>
+        <p class="font-size-lg text-muted mb-6 mb-md-0">
+          From us to your inbox weekly.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
